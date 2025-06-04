@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title class="lang" data-en="StockMarket" data-pt="Mercado de Ações">StockMarket</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .lang-switch, .theme-switch, .social-icons {
+      margin: 10px;
+    }
+    .social-icons a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-theme-l1"> </a>
+    <a href="Sobre.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sobre</a>
+      <a href="News.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contato</a>
+        <div class="w3-right">
+  <button class="w3-button theme-switch" onclick="toggleTheme()"><i class="fa fa-adjust"></i></button>
+      <button class="w3-button lang-switch" onclick="toggleLang()"><i class="fa fa-language"></i></button>
+      <span class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100029783529323&sk=about_overview" class="fa fa-facebook"></a>
+        <a href="https://x.com/" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/in/flaviormiranda/" class="fa fa-linkedin"></a>
+      </span>
+    </div>
+   </div>
+</div>
+
+<!-- Sidebar -->
+ <article> 
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a  class="w3-bar-item w3-button w3-hover-black" href="Operações_DayTrade.html">Trades ao Vivo</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="Forex.html">Forex</a>
+   <a class="w3-bar-item w3-button w3-hover-black" href="Analise-Tecnica.html">Análise Técnica</a>
+</nav>
+</article>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:300px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="lang" data-en="Dashboard" data-pt="Painel"class="w3-text-teal"><strong>Dashboard</strong></h1>
+      <h2 class="lang" data-en="Cash market" data-pt="Mercado à Vista" class="w3-text-teal" >Mercado à Vista</h2>
+      <p class="lang" data-en="Companie's Chart  per area" data-pt="Chart de Empresas por area">Chart de Empresas por area.</p>
+ 
+     <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container3">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>
+    {
+    "exchanges"; [],
+    "dataSource"; "SPX500",
+    "grouping"; "sector",
+    "blockSize"; "market_cap_basic",
+    "blockColor"; "change",
+    "locale"; "en",
+    "symbolUrl"; "",
+    "colorTheme"; "light",
+    "hasTopBar"; false,
+    "isDataSetEnabled"; false,
+    "isZoomEnabled"; true,
+    "hasSymbolTooltip"; true,
+    "isMonoSize"; false,
+    "width"; "100%",
+    "height"; "100%"
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+    
+    
+    </div>
+           <!-- TradingView Widget BEGIN -->
+
+    <div class="w3-third w3-container3">
+    <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https;//www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol"; "FX:EURUSD",
+    "width"; 350,
+    "height"; 220,
+    "locale"; "en",
+    "dateRange"; "12M",
+    "colorTheme"; "light",
+    "isTransparent"; false,
+    "autosize"; false,
+    "largeChartUrl"; ""
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+<!-- TradingView Widget BEGIN -->
+ 
+ <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+    {
+    "title"; "Stocks",
+    "tabs"; [
+      {
+        "title": "Financial",
+        "symbols": [
+          {
+            "s": "NYSE:JPM",
+            "d": "JPMorgan Chase"
+          },
+          {
+            "s": "NYSE:WFC",
+            "d": "Wells Fargo Co New"
+          },
+          {
+            "s": "NYSE:BAC",
+            "d": "Bank Amer Corp"
+          },
+          {
+            "s": "NYSE:HSBC",
+            "d": "Hsbc Hldgs Plc"
+          },
+          {
+            "s": "NYSE:C",
+            "d": "Citigroup Inc"
+          },
+          {
+            "s": "NYSE:MA",
+            "d": "Mastercard Incorporated"
+          }
+        ]
+      },
+      {
+        "title": "Technology",
+        "symbols": [
+          {
+            "s": "NASDAQ:AAPL",
+            "d": "Apple"
+          },
+          {
+            "s": "NASDAQ:GOOGL",
+            "d": "Alphabet"
+          },
+          {
+            "s": "NASDAQ:MSFT",
+            "d": "Microsoft"
+          },
+          {
+            "s": "NASDAQ:FB",
+            "d": "Meta Platforms"
+          },
+          {
+            "s": "NYSE:ORCL",
+            "d": "Oracle Corp"
+          },
+          {
+            "s": "NASDAQ:INTC",
+            "d": "Intel Corp"
+          }
+        ]
+      },
+      {
+        "title": "Services",
+        "symbols": [
+          {
+            "s": "NASDAQ:AMZN",
+            "d": "Amazon"
+          },
+          {
+            "s": "NYSE:BABA",
+            "d": "Alibaba Group Hldg Ltd"
+          },
+          {
+            "s": "NYSE:T",
+            "d": "At&t Inc"
+          },
+          {
+            "s": "NYSE:WMT",
+            "d": "Walmart"
+          },
+          {
+            "s": "NYSE:V",
+            "d": "Visa"
+          }
+        ]
+      }
+    ],
+    "width"; "100%",
+    "height"; "100%",
+    "showChart"; true,
+    "showFloatingTooltip"; false,
+    "locale"; "en",
+    "plotLineColorGrowing"; "#2962FF",
+    "plotLineColorFalling"; "#2962FF",
+    "belowLineFillColorGrowing"; "rgba(41, 98, 255, 0.12)",
+    "belowLineFillColorFalling"; "rgba(41, 98, 255, 0.12)",
+    "belowLineFillColorGrowingBottom"; "rgba(41, 98, 255, 0)",
+    "belowLineFillColorFallingBottom"; "rgba(41, 98, 255, 0)",
+    "gridLineColor"; "rgba(240, 243, 250, 0)",
+    "scaleFontColor"; "rgba(120, 123, 134, 1)",
+    "showSymbolLogo"; true,
+    "symbolActiveColor"; "rgba(41, 98, 255, 0.12)",
+    "colorTheme"; "light"
+  }
+    </script>
+  </div>
+     <!-- TradingView Widget END -->   
+  </div>
+    </div>
+
+ 
+  <div class="w3-row">
+    <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="lang" data-en="Future Market" data-pt="Mercado Futuro"class="w3-text-teal">Mercado Futuro</h1>
+      <p class="lang" data-en="The Futures Market is a type of financial market where contracts to buy and sell 
+      assets are traded for future delivery, that is, an agreement to buy or sell an asset on a specific date in 
+      the future, but with the price being determined at the time of the trade" data-pt="O Mercado Futuro é um tipo de 
+      mercado financeiro onde contratos de compra e venda de ativos são negociados para entrega futura, ou seja, 
+      um acordo para comprar ou vender um ativo em uma data específica no futuro, mas com o preço sendo determinado 
+      no momento da negociação">O Mercado Futuro é um tipo de 
+      mercado financeiro onde contratos de compra e venda de ativos são negociados para entrega futura, ou seja, 
+      um acordo para comprar ou vender um ativo em uma data específica no futuro, mas com o preço sendo determinado 
+      no momento da negociação</p>
+    </div>
+    </div>
+  </div>
+ <!-- TradingView Widget BEGIN -->
+ <div class="widget-container_Fut"> 
+<div class="tradingview-widget-container" style="height:100%;width:100%">
+  <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+  {
+  "autosize"; true,
+  "symbol"; "NASDAQ:AAPL",
+  "interval"; "D",
+  "timezone"; "Etc/UTC",
+  "theme"; "light",
+  "style";"1",
+  "locale"; "en",
+  "allow_symbol_change"; true,
+  "calendar"; false,
+  "support_host"; "https://www.tradingview.com"
+}
+  </script>
+</div>
+ 
+
+   <!-- TradingView Widget END -->
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <article>
+      <h1  class="w3-text-teal">Bovespa</h1>
+      <p>O Brasil possui apenas uma bolsa de valores para negociar os ativos. A B3 (Brasil Bolsa Balcão) foi fundada em 1890 com a criação da Bolsa Livre de São Paulo por 
+        Emílio Rangel Pestana, evoluindo para a Bolsa de Fundos Públicos de São Paulo e, posteriormente, para a Bovespa.</p>
+        <P>Cada empresa listada na bolsa recebe um Ticker. O Ticker são 4 letras e um número que representa a empresa.</P>
+        <p> Clique nos numeros abaixo para conhecer as empresas listadas.</p>
+      </article>
+    </div>
+
+  </div>
+
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="Tickers_A.html">A</a>
+      <a class="w3-button w3-hover-black" href="Tickers_B.html">B</a>
+      <a class="w3-button w3-hover-black" href="Tickers_C.html">C</a>
+      <a class="w3-button w3-hover-black" href="Tickers_D.html">D</a>
+      <a class="w3-button w3-hover-black" href="Tickers_E.html">E</a>
+      <a class="w3-button w3-hover-black" href="Tickers_F.html">F</a>
+      <a class="w3-button w3-hover-black" href="Tickers_G.html">G</a>
+      <a class="w3-button w3-hover-black" href="Tickers_H.html">H</a>
+      <a class="w3-button w3-hover-black" href="Tickers_I.html">I</a>
+      <a class="w3-button w3-hover-black" href="Tickers_J.html">J</a>
+      <a class="w3-button w3-hover-black" href="Tickers_K.html">K</a>
+      <a class="w3-button w3-hover-black" href="Tickers_M.html">M</a>
+      <a class="w3-button w3-hover-black" href="Tickers_N.html">N</a>
+      <a class="w3-button w3-hover-black" href="Tickers_O.html">O</a>
+      <a class="w3-button w3-hover-black" href="Tickers_P.html">P</a>
+      <a class="w3-button w3-hover-black" href="Tickers_Q.html">Q</a>
+      <a class="w3-button w3-hover-black" href="Tickers_R.html">R</a>
+      <a class="w3-button w3-hover-black" href="Tickers_S.html">S</a>
+      <a class="w3-button w3-hover-black" href="Tickers_T.html">T</a>
+      <a class="w3-button w3-hover-black" href="Tickers_U.html">U</a>
+      <a class="w3-button w3-hover-black" href="Tickers_V.html">V</a>
+      <a class="w3-button w3-hover-black" href="Tickers_W.html">W</a>
+      <a class="w3-button w3-hover-black" href="Tickers_X.html">X</a>
+      <a class="w3-button w3-hover-black" href="Tickers_Y.html">Y</a>
+      <a class="w3-button w3-hover-black" href="Tickers_Z.html">Z</a>
+    </div>
+  </div>
+   <!-- Contact Section -->
+   <div class="w3-container w3-padding-large w3-grey">
+    <h4 id="contact"><b>Contact Me</b></h4>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+        <p>email@email.com</p>
+      </div>
+      <div class="w3-third w3-teal">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+        <p>Chicago, US</p>
+      </div>
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+        <p>512312311</p>
+      </div>
+    </div>
+    <hr class="w3-opacity">
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+    </form>
+  </div>
+
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+  
+
+/*#######################################################################################*/
+/*Esse bloco é responsável por organizar o ícone das empresas
+/*#######################################################################################*/
+ 
+.Letter {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(200, 216, 233);
+    font-family: "Roboto", sans-serif
+  }
+  
+  .Letter > div {
+    background-color: #e1e9f0;
+    width: 85px;
+    margin: 15px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+   }
+
+ 
+
+/*#######################################################################################*/
+/*Esse bloco vai formatar o video
+/*#######################################################################################*/
+div.video{
+   background-color: rgb(220, 240, 241);
+    margin-bottom: 10px;
+    padding: 20px;
+     position: absolute;
+     top: 40%;
+     width: 90%;
+     height: 60%;
+     left: 5%;
+    padding-bottom: 35%;
+
+
+}
+div.video iframe{
+    position: absolute; /* Ao user o position absolute, podemos usar  os parametros de navegação como top, left,etc*/
+    top:7%; /*controla a distância do video em relação ao topo da tela*/
+    left:7%; /*Trás o video para a esquerda*/
+    width: 85%;/*Controla o tamanho do video lateralmente*/
+    height: 90%; /* Controla o tamanho do video top-down*/
+    padding: 5px; /*Empurra o video para baixo*/
+
+}
+ 
+ 
+/*#######################################################################################*/
+/*Esse bloco vai formatar os widgets que adicionei do site Trendview
+/*#######################################################################################*/
+
+.widget-container_Fut{
+  width: 900px;
+  height: 500px;
+ 
+}
+
+ 
+.widget-container2 {
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    background-color: rgb(16, 227, 238);
+     padding: 5px;
+     position: absolute;
+     left: 10%;
+     top: 30%;
+    padding-bottom: 1%;
+ 
+
+}
+ 
+   .widget-container_news{
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    left: 5%;
+   }
+
+ 
